@@ -8,20 +8,51 @@
 </head>
 
 <body>
-    
+
 
     <script>
+        // function merge2String(a, b) {
+        //     let result = ""
+        //     for (let i = 0; i < a.length || i < b.length; i++) {
+        //         if (i < a.length) {
+        //             result += a[i] + b[i]
+        //             return (result + a.slice(i + 1))
+        //         }
+        //         if (i < b.length) {
+        //             result += b[i] + a[i]
+        //             return (result + a.slice(i + 1))
+        //         }
+        //         return result
+        //     }
+        // }
+        // console.log(merge2String("abc", "0123"))
+        // function merge2String(a, b) {
+
+        //     let x = '';
+        //     let y = Math.min(a.length, b.length);
+        //     for (let i = 0; i < y; i++) {
+        //         x += a[i] + b[i]
+        //     };
+        //     return x + a.slice(i) + b.slice(i)
+        // }
+        // console.log(merge2String('abc', 'def'))
         function merge2String(a, b) {
-            let i;
-            let x = '';
-            let y = Math.min(a.length, b.length);
-            for (let i = 0; i < y; i++) {
-                x += a[i] + b[i]
-            };
-            return x + a.slice(i) + b.slice(i)
+            let result = "";
+            for (let i = 0; i < a.length || i < b.length; i++) {
+                if (i < a.length) {
+                    result += a[i];
+                }
+                if (i < b.length) {
+                    result += b[i];
+                }
+
+            }
+            return result;
         }
-        console.log(merge2String('abc', 'defghjk'))
-        
+
+        console.log(merge2String("abcdefgh", "123456789"));
+
+
     </script>
 </body>
 
